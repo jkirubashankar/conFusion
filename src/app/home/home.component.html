@@ -18,6 +18,11 @@
     </p>
   </mat-card-content>
 </mat-card>
+ 
+<div fxFlex [hidden]="dish">
+  <mat-spinner></mat-spinner>
+  <h4>Loading... Please wait</h4>
+</div>
 
 <mat-card *ngIf="promotion" fxFlex>
   <mat-card-header>
@@ -31,9 +36,13 @@
     <p>{{promotion.description}}
     </p>
   </mat-card-content>
-</mat-card>
+</mat-card> 
 
-
+<div fxFlex [hidden]="promotion">
+  <mat-spinner></mat-spinner>
+  <h4>Loading... Please wait</h4>
+</div>
+   
 <mat-card *ngIf="leader" fxFlex>
   <mat-card-header>
     <div mat-card-avatar></div>
@@ -46,6 +55,10 @@
     <p>{{leader.description}}
     </p>
   </mat-card-content>
-</mat-card> -->
-
+</mat-card> 
+    
+<div fxFlex [hidden]="leader">
+  <mat-spinner></mat-spinner>
+  <h4>Loading... Please wait</h4>
 </div>
+   </div>
